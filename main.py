@@ -6,12 +6,16 @@ import os
 
 app = Flask(__name__)
 
+"""
 #環境変数
-ACCESS_TOKEN = os.environ['cMd9wgdufzWuZdfJ6QYYi2flvfEH1NeNPJH2FgSnaMIRNc7i8o5OCysA6jt5zjZb2Ekfd7H6mJY / WusAbUdrqzy1 + UkkjIZOjq7wo9IQ + VocrrXoM']
-SECRET = os.environ['e262d76e7f872d0f53864429f5ae3100']
+LINE_CHANNEL_ACCESS_TOKEN = os.environ['cMd9wgdufzWuZdfJ6QYYi2flvfEH1NeNPJH2FgSnaMIRNc7i8o5OCysA6jt5zjZb2Ekfd7H6mJY / WusAbUdrqzy1 + UkkjIZOjq7wo9IQ + VocrrXoM']
+LINE_CHANNEL_SECRET = os.environ['e262d76e7f872d0f53864429f5ae3100']
+"""
+LINE_CHANNEL_ACCESS_TOKEN = os.environ['LINE_CHANNEL_ACCESS_TOKEN']
+LINE_CHANNEL_SECRET = os.environ['LINE_CHANNEL_SECRET']
 
-line_bot_api = LineBotApi(ACCESS_TOKEN)
-handler = WebhookHandler(SECRET)
+line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
+handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 @app.route('/callback', method=['POST'])
 def callback():
