@@ -15,9 +15,6 @@ line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
 handler = WebhookHandler(LINE_CHANNEL_SECRET)
 
 
-@app.route("/")
-def hello_world():
-    return "hello world!"
 
 
 
