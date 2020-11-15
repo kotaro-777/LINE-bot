@@ -3,10 +3,6 @@ from linebot import LineBotApi, WebhookHandler
 from linebot.exceptions import InvalidSignatureError
 from linebot.models import MessageEvent, TextMessage, TextSendMessage
 import os
-import logging
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 
@@ -33,7 +29,6 @@ def hello_world():
 def callback():
     
     signature = request.headers['X-Line-Signature']
-    print(signature)
     
     body = request.get_data(as_text = True)
     app.logger.info('Request body:' + body)
