@@ -40,6 +40,10 @@ def callback():
     app.logger.info('アクセストークン：' + LINE_CHANNEL_ACCESS_TOKEN)
     
     
+    """
+    app.logger.info(f'アクセストークン:{LINE_CHANNEL_ACCESS_TOKEN}')
+    app.logger.info(f'アクセストークン:{line_bot_api}')
+    """
     
     try:
         handler.handle(body, signature)

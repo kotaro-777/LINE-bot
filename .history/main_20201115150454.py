@@ -37,8 +37,10 @@ def callback():
     
     body = request.get_data(as_text = True)
     app.logger.info('Request body:' + body)
-    app.logger.info('アクセストークン：' + LINE_CHANNEL_ACCESS_TOKEN)
     
+    """
+    app.logger.info(f'アクセストークン:{LINE_CHANNEL_ACCESS_TOKEN}')
+    app.logger.info(f'アクセストークン:{line_bot_api}')
     
     
     try:
