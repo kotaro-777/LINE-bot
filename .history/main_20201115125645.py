@@ -23,7 +23,6 @@ def hello_world():
 
 @app.route('/callback', methods=['POST','GET'])
 def callback():
-    """
     signature = request.headers['X-Line-Signature']
     
     body = request.get_data(as_text = True)
@@ -34,7 +33,7 @@ def callback():
         handler.handle(body, signature)
     except InvalidSignatureError:
         abort(400)
-    """
+    
     return 'OK'
 
 @handler.add(MessageEvent, message=TextMessage)
