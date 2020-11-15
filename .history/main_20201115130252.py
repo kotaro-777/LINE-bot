@@ -21,7 +21,7 @@ def hello_world():
 
 
 
-@app.route('/callback', methods=['POST'])
+@app.route('/callback', methods=['POST','GET'])
 def callback():
     
     signature = request.headers['X-Line-Signature']
