@@ -55,16 +55,6 @@ def handle_message(event):
         TextSendMessage(text = event.message.text)
     )
 
-    
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event): #ここは好きな変数名
-    line_bot_api.reply_message(# このreply_messageのmethodを適宜変える
-        event.reply_token,
-        TextSendMessage(text = event.message.text)
-    )
-    
-
-
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
     app.run(host = '0.0.0.0', port = port)

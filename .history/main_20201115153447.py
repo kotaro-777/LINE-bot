@@ -54,14 +54,7 @@ def handle_message(event):
         event.reply_token,
         TextSendMessage(text = event.message.text)
     )
-
     
-@handler.add(MessageEvent, message=TextMessage)
-def handle_message(event): #ここは好きな変数名
-    line_bot_api.reply_message(# このreply_messageのmethodを適宜変える
-        event.reply_token,
-        TextSendMessage(text = event.message.text)
-    )
     
 
 
